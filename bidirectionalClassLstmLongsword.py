@@ -5,6 +5,7 @@ Time per epoch on CPU (Core i7): ~150s.
 
 from __future__ import print_function
 import numpy as np
+import h5py
 from numpy import array
 import csv
 
@@ -12,7 +13,7 @@ import csv
 from keras.models import Sequential
 from keras.layers import Dense, Dropout, Embedding, LSTM, Bidirectional
 
-max_features = 35000
+max_features = 35537
 maxlen = 12
 batch_size = 4
 epoch_size = 40
@@ -86,21 +87,23 @@ print ('Classification Accuracy %: ', (predictionArgMax == y_test).sum() / len(y
 model_json = model.to_json()
 with open("bidirectionalClassLstmLongswordModel.json", "w") as json_file:
     json_file.write(model_json)
+    print("Saved weights to disk")
 # serialize weights to HDF5
+
 model.save_weights("bidirectionalClassLstmLongswordModelWeights.h5")
 print("Saved model to disk")
 
 
 ## after
-from keras.models import model_from_json
-json_file = open('bidirectionalClassLstmLongswordModel.json', 'r')
-loaded_model_json = json_file.read()
-json_file.close()
-loaded_model = model_from_json(loaded_model_json)
-loaded_model.load_weights("bidirectionalClassLstmLongswordModelWeights.h5")
-
-x_test = np.array([[ 0, 8370, 0,10747, 0, 9541, 0, 240, 0, 456, 0, 27]])
-prediction = loaded_model.predict(x_test)
-predictionArgMax = np.argmax(prediction, axis=1)
-print('Class: ', predictionArgMax[0])
-print('Accuracy: ', prediction[0, predictionArgMax[0]])
+# from keras.models import model_from_json
+# json_file = open('bidirectionalClassLstmLongswordModel.json', 'r')
+# loaded_model_json = json_file.read()
+# json_file.close()
+# loaded_model = model_from_json(loaded_model_json)
+# loaded_model.load_weights("bidirectionalClassLstmLongswordModelWeights.h5")
+#
+# x_test = np.array([[ 0, 8370, 0,10747, 0, 9541, 0, 240, 0, 456, 0, 27]])
+# prediction = loaded_model.predict(x_test)
+# predictionArgMax = np.argmax(prediction, axis=1)
+# print('Class: ', predictionArgMax[0])
+# print('Accuracy: ', prediction[0, predictionArgMax[0]])
