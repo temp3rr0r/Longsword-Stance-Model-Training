@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b955812-b9a5-4975-873f-bc122eb0d36e" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bidirectionalRetrainingLstmLongsword.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bidirectionalClassLstmLongsword.py" afterPath="$PROJECT_DIR$/bidirectionalClassLstmLongsword.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bidirectionalClassLstmLongswordModel.json" afterPath="$PROJECT_DIR$/bidirectionalClassLstmLongswordModel.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bidirectionalClassLstmLongswordModelWeights.h5" afterPath="$PROJECT_DIR$/bidirectionalClassLstmLongswordModelWeights.h5" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loadDLModel.py" afterPath="$PROJECT_DIR$/loadDLModel.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/longsword.csv" afterPath="$PROJECT_DIR$/longsword.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/longsword2.csv" afterPath="$PROJECT_DIR$/longsword2.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/minimalDLmodelRunner.py" afterPath="$PROJECT_DIR$/minimalDLmodelRunner.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,17 +17,18 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/LongswordTimeseriesModelTraining$bidirectionalClassLstmLongsword.coverage" NAME="bidirectionalClassLstmLongsword Coverage Results" MODIFIED="1510361085897" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/LongswordTimeseriesModelTraining$bidirectionalRetrainingLstmLongsword.coverage" NAME="bidirectionalRetrainingLstmLongsword Coverage Results" MODIFIED="1510712349791" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/LongswordTimeseriesModelTraining$bidirectionalClassLstmLongsword.coverage" NAME="bidirectionalClassLstmLongsword Coverage Results" MODIFIED="1510712195692" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/LongswordTimeseriesModelTraining$loadDLModel.coverage" NAME="loadDLModel Coverage Results" MODIFIED="1510360645071" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/LongswordTimeseriesModelTraining$minimalDLmodelRunner.coverage" NAME="minimalDLmodelRunner Coverage Results" MODIFIED="1510360741454" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/LongswordTimeseriesModelTraining$minimalDLmodelRunner.coverage" NAME="minimalDLmodelRunner Coverage Results" MODIFIED="1510711497823" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="525">
-      <file leaf-file-name="bidirectionalClassLstmLongsword.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="bidirectionalClassLstmLongsword.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bidirectionalClassLstmLongsword.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="18" column="15" lean-forward="false" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
+            <state relative-caret-position="638">
+              <caret line="22" column="29" lean-forward="false" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
               <folding>
                 <element signature="e#156#193#0" expanded="true" />
               </folding>
@@ -35,12 +36,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="minimalDLmodelRunner.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="bidirectionalRetrainingLstmLongsword.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bidirectionalRetrainingLstmLongsword.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="928">
+              <caret line="35" column="70" lean-forward="false" selection-start-line="35" selection-start-column="70" selection-end-line="35" selection-end-column="70" />
+              <folding>
+                <element signature="e#156#193#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="minimalDLmodelRunner.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/minimalDLmodelRunner.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="8" lean-forward="false" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
-              <folding />
+            <state relative-caret-position="464">
+              <caret line="16" column="58" lean-forward="false" selection-start-line="16" selection-start-column="58" selection-end-line="16" selection-end-column="58" />
+              <folding>
+                <element signature="e#0#37#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -48,8 +63,8 @@
       <file leaf-file-name="longsword.csv" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/longsword.csv">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19111">
-              <caret line="869" column="0" lean-forward="true" selection-start-line="869" selection-start-column="0" selection-end-line="869" selection-end-column="0" />
+            <state relative-caret-position="27231">
+              <caret line="939" column="0" lean-forward="true" selection-start-line="939" selection-start-column="0" selection-end-line="939" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -58,8 +73,8 @@
       <file leaf-file-name="longsword2.csv" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/longsword2.csv">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="1039">
+              <caret line="869" column="0" lean-forward="true" selection-start-line="869" selection-start-column="0" selection-end-line="869" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -73,8 +88,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/longsword.csv" />
         <option value="$PROJECT_DIR$/loadDLModel.py" />
+        <option value="$PROJECT_DIR$/longsword2.csv" />
+        <option value="$PROJECT_DIR$/minimalDLmodelRunner.py" />
+        <option value="$PROJECT_DIR$/bidirectionalRetrainingLstmLongsword.py" />
+        <option value="$PROJECT_DIR$/longsword3.csv" />
+        <option value="$PROJECT_DIR$/longsword.csv" />
         <option value="$PROJECT_DIR$/bidirectionalClassLstmLongsword.py" />
       </list>
     </option>
@@ -138,7 +157,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.bidirectionalClassLstmLongsword">
+  <component name="RunManager" selected="Python.bidirectionalRetrainingLstmLongsword">
     <configuration name="bidirectionalClassLstmLongsword" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -153,6 +172,24 @@
       <module name="LongswordTimeseriesModelTraining" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bidirectionalClassLstmLongsword.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="bidirectionalRetrainingLstmLongsword" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="LongswordTimeseriesModelTraining" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bidirectionalRetrainingLstmLongsword.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -193,16 +230,18 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <list size="3">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Python.bidirectionalClassLstmLongsword" />
       <item index="1" class="java.lang.String" itemvalue="Python.loadDLModel" />
       <item index="2" class="java.lang.String" itemvalue="Python.minimalDLmodelRunner" />
+      <item index="3" class="java.lang.String" itemvalue="Python.bidirectionalRetrainingLstmLongsword" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Python.bidirectionalClassLstmLongsword" />
-        <item index="1" class="java.lang.String" itemvalue="Python.minimalDLmodelRunner" />
-        <item index="2" class="java.lang.String" itemvalue="Python.loadDLModel" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Python.bidirectionalRetrainingLstmLongsword" />
+        <item index="1" class="java.lang.String" itemvalue="Python.bidirectionalClassLstmLongsword" />
+        <item index="2" class="java.lang.String" itemvalue="Python.minimalDLmodelRunner" />
+        <item index="3" class="java.lang.String" itemvalue="Python.loadDLModel" />
       </list>
     </recent_temporary>
   </component>
@@ -221,7 +260,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-12" y="-12" width="3864" height="2132" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -229,7 +267,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32955715" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32955715" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -330,7 +368,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -396,7 +436,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -492,37 +534,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/longsword2.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bidirectionalClassLstmLongswordModel.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="2058" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="2058" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/longsword.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19111">
-          <caret line="869" column="0" lean-forward="true" selection-start-line="869" selection-start-column="0" selection-end-line="869" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bidirectionalClassLstmLongsword.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="18" column="15" lean-forward="false" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
-          <folding>
-            <element signature="e#156#193#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -534,11 +550,65 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/longsword2.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1039">
+          <caret line="869" column="0" lean-forward="true" selection-start-line="869" selection-start-column="0" selection-end-line="869" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/minimalDLmodelRunner.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="8" lean-forward="false" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
+        <state relative-caret-position="464">
+          <caret line="16" column="58" lean-forward="false" selection-start-line="16" selection-start-column="58" selection-end-line="16" selection-end-column="58" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/r.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="821" column="68" lean-forward="true" selection-start-line="821" selection-start-column="68" selection-end-line="821" selection-end-column="68" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/longsword3.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="8" column="32" lean-forward="true" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bidirectionalRetrainingLstmLongsword.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="928">
+          <caret line="35" column="70" lean-forward="false" selection-start-line="35" selection-start-column="70" selection-end-line="35" selection-end-column="70" />
+          <folding>
+            <element signature="e#156#193#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/longsword.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27231">
+          <caret line="939" column="0" lean-forward="true" selection-start-line="939" selection-start-column="0" selection-end-line="939" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bidirectionalClassLstmLongsword.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="22" column="29" lean-forward="false" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+          <folding>
+            <element signature="e#156#193#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

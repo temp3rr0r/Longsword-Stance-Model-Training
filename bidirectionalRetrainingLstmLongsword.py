@@ -20,22 +20,25 @@ epoch_size = 40 # 40
 class_count = 7
 
 print('Loading data...')
-r = np.genfromtxt("longsword2.csv", delimiter=',')
+r = np.genfromtxt("longsword.csv", delimiter=',')
 
 print ('Start Array r:')
 print (r)
 
 # TODO: add columns. If positive: 0, 32500. If negative 32500, 0. Essentially slit it into to classes for possives and negatives
-r2 = np.copy(r)
-r[r < 0] = 0
-r2[r2 > 0] = 0
-r2 *= -1
-r = np.insert(r, 1, values=r2[:,1], axis=1) # inser2t values befor2e column 3
-r = np.insert(r, 2, values=r2[:,2], axis=1) # inser2t values befor2e column 3
-r = np.insert(r, 3, values=r2[:,3], axis=1) # inser2t values befor2e column 3
-r = np.insert(r, 4, values=r2[:,4], axis=1) # inser2t values befor2e column 3
-r = np.insert(r, 5, values=r2[:,5], axis=1) # inser2t values befor2e column 3
-r = np.insert(r, 6, values=r2[:,6], axis=1) # inser2t values befor2e column 3
+# r2 = np.copy(r)
+# r[r < 0] = 0
+# r2[r2 > 0] = 0
+# r2 *= -1
+# r = np.insert(r, 1, values=r2[:,1], axis=1) # inser2t values befor2e column 3
+# r = np.insert(r, 2, values=r2[:,2], axis=1) # inser2t values befor2e column 3
+# r = np.insert(r, 3, values=r2[:,3], axis=1) # inser2t values befor2e column 3
+# r = np.insert(r, 4, values=r2[:,4], axis=1) # inser2t values befor2e column 3
+# r = np.insert(r, 5, values=r2[:,5], axis=1) # inser2t values befor2e column 3
+# r = np.insert(r, 6, values=r2[:,6], axis=1) # inser2t values befor2e column 3
+#r2 = np.copy(r)
+#r = np.insert(r, 1, values=r2[:,2:r.shape[0]], axis=1) # inser2t values befor2e column 3
+r = np.delete(r, [0], axis=1)
 
 #np.random.shuffle(r)
 proportion15Percent = int(0.15 * r.shape[0])
@@ -60,7 +63,7 @@ model = Sequential()
 model.add(Embedding(max_features, 128, input_length=maxlen))
 model.add(Bidirectional(LSTM(64)))
 model.add(Dropout(0.5))
-model.add(Dense(6, activation='softmax')) # sigmoid
+model.add(Dense(class_count, activation='softmax')) # sigmoid
 model.compile(loss='sparse_categorical_crossentropy',
               optimizer='rmsprop',
               metrics=['accuracy'])
@@ -86,12 +89,12 @@ print ('Classification Accuracy %: ', (predictionArgMax == y_test).sum() / len(y
 # Store model
 # serialize model to JSON
 model_json = model.to_json()
-with open("bidirectionalClassLstmLongswordModel.json", "w") as json_file:
+with open("bidirectionalRetrainingLstmLongswordModel.json", "w") as json_file:
     json_file.write(model_json)
     print("Saved weights to disk")
 # serialize weights to HDF5
 
-model.save_weights("bidirectionalClassLstmLongswordModelWeights.h5")
+model.save_weights("bidirectionalRetrainingLstmLongswordModelWeights.h5")
 print("Saved model to disk")
 
 
