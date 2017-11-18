@@ -13,10 +13,10 @@ import csv
 from keras.models import Sequential
 from keras.layers import Dense, Dropout, Embedding, LSTM, Bidirectional
 
-max_features = 35537
-maxlen = 12
+max_features = 65536
+maxlen = 17 * 2 # 6 * 2
 batch_size = 4
-epoch_size = 40 # 40
+epoch_size = 4 # 40
 class_count = 7
 
 print('Loading data...')
@@ -26,38 +26,70 @@ print ('Start Array r:')
 print (r)
 
 # TODO: add columns. If positive: 0, 32500. If negative 32500, 0. Essentially slit it into to classes for possives and negatives
-# r2 = np.copy(r)
-# r[r < 0] = 0
-# r2[r2 > 0] = 0
-# r2 *= -1
-# r = np.insert(r, 1, values=r2[:,1], axis=1) # inser2t values befor2e column 3
-# r = np.insert(r, 2, values=r2[:,2], axis=1) # inser2t values befor2e column 3
-# r = np.insert(r, 3, values=r2[:,3], axis=1) # inser2t values befor2e column 3
-# r = np.insert(r, 4, values=r2[:,4], axis=1) # inser2t values befor2e column 3
-# r = np.insert(r, 5, values=r2[:,5], axis=1) # inser2t values befor2e column 3
-# r = np.insert(r, 6, values=r2[:,6], axis=1) # inser2t values befor2e column 3
-#r2 = np.copy(r)
+r2 = np.copy(r)
+r[r < 0] = 0
+r2[r2 > 0] = 0
+r2 *= -1
+r = np.insert(r, 1, values=r2[:,1], axis=1) # inser2t values befor2e column 3
+r = np.insert(r, 2, values=r2[:,2], axis=1) # inser2t values befor2e column 3
+r = np.insert(r, 3, values=r2[:,3], axis=1) # inser2t values befor2e column 3
+r = np.insert(r, 4, values=r2[:,4], axis=1) # inser2t values befor2e column 3
+r = np.insert(r, 5, values=r2[:,5], axis=1) # inser2t values befor2e column 3
+r = np.insert(r, 6, values=r2[:,6], axis=1) # inser2t values befor2e column 3
+r = np.insert(r, 7, values=r2[:,7], axis=1) # inser2t values befor2e column 3
+r = np.insert(r, 8, values=r2[:,8], axis=1) # inser2t values befor2e column 3
+r = np.insert(r, 9, values=r2[:,9], axis=1) # inser2t values befor2e column 3
+r = np.insert(r, 10, values=r2[:,10], axis=1) # inser2t values befor2e column 3
+r = np.insert(r, 11, values=r2[:,11], axis=1) # inser2t values befor2e column 3
+r = np.insert(r, 12, values=r2[:,12], axis=1) # inser2t values befor2e column 3
+r = np.insert(r, 13, values=r2[:,13], axis=1) # inser2t values befor2e column 3
+r = np.insert(r, 14, values=r2[:,14], axis=1) # inser2t values befor2e column 3
+r = np.insert(r, 15, values=r2[:,15], axis=1) # inser2t values befor2e column 3
+r = np.insert(r, 16, values=r2[:,16], axis=1) # inser2t values befor2e column 3
+r = np.insert(r, 17, values=r2[:,17], axis=1) # inser2t values befor2e column 3
+
+
+r2 = np.copy(r)
 #r = np.insert(r, 1, values=r2[:,2:r.shape[0]], axis=1) # inser2t values befor2e column 3
-r = np.delete(r, [0], axis=1)
+
+#r = np.delete(r, [0], axis=1) # Remove timestamp
 
 #np.random.shuffle(r)
-proportion15Percent = int(0.15 * r.shape[0])
-x_validate = r[0:proportion15Percent,1:maxlen+1]
-y_validate = r[0:proportion15Percent,0]
-x_test= r[proportion15Percent + 1:2*proportion15Percent,1:maxlen+1]
-y_test = r[proportion15Percent + 1:2*proportion15Percent,0]
-x_train = r[2*proportion15Percent + 1:len(r),1:maxlen+1]
-y_train = r[2*proportion15Percent + 1:len(r),0]
+useTest = False
+proportion = 0.1
+if useTest == True:
+    proportion15Percent = int(proportion * r.shape[0])
+    x_validate = r[0:proportion15Percent, 1:maxlen + 1]
+    y_validate = r[0:proportion15Percent, 0]
+    x_test= r[proportion15Percent + 1:2 * proportion15Percent, 1:maxlen + 1]
+    y_test = r[proportion15Percent + 1:2 * proportion15Percent, 0]
+    x_train = r[2 * proportion15Percent + 1:len(r), 1:maxlen + 1]
+    y_train = r[2 * proportion15Percent + 1:len(r), 0]
 
-print(len(x_train), 'train sequences (70%)')
-print(len(x_validate), 'validate sequences (15%)')
-print(len(x_test), 'test sequences (15%)')
+else:
+    proportion30Percent = int(proportion * r.shape[0])
+    x_validate = r[0:proportion30Percent, 1:maxlen + 1]
+    y_validate = r[0:proportion30Percent, 0]
+    # x_test = r[proportion15Percent + 1:2 * proportion15Percent, 1:maxlen + 1]
+    # y_test = r[proportion15Percent + 1:2 * proportion15Percent, 0]
+    x_train = r[proportion30Percent + 1:len(r), 1:maxlen + 1]
+    y_train = r[proportion30Percent + 1:len(r), 0]
+
+if useTest == True:
+    print(len(x_train), 'train sequences (' + str((1 - 2 * proportion) * 100) + '%)')
+else:
+    print(len(x_train), 'train sequences (' + str((1 - proportion) * 100) + '%)')
+print(len(x_validate), 'validate sequences (' + str(proportion * 100) + '%)')
+if useTest == True:
+    print(len(x_test), 'test sequences (' + str(proportion * 100) + '%)')
 
 print('Pad sequences (samples x time)')
 print('x_train shape:', x_train.shape)
-print('x_test shape:', x_test.shape)
+if useTest == True:
+    print('x_test shape:', x_test.shape)
 y_train = np.array(y_train)
-y_test = np.array(y_test)
+if useTest == True:
+    y_test = np.array(y_test)
 
 model = Sequential()
 model.add(Embedding(max_features, 128, input_length=maxlen))
@@ -75,16 +107,17 @@ model.fit(x_train, y_train,
           validation_data=[x_validate, y_validate])
 
 # Prediction
-print('Prediction')
-prediction = model.predict(x_test)
-print(prediction)
-print('Prediction Arg max')
-predictionArgMax = np.argmax(prediction, axis=1)
-print(predictionArgMax)
-print('Expected')
-print(y_test)
+if useTest == True:
+    print('Prediction')
+    prediction = model.predict(x_test)
+    print(prediction)
+    print('Prediction Arg max')
+    predictionArgMax = np.argmax(prediction, axis=1)
+    print(predictionArgMax)
+    print('Expected')
+    print(y_test)
 
-print ('Classification Accuracy %: ', (predictionArgMax == y_test).sum() / len(y_test))
+    print ('Classification Accuracy %: ', (predictionArgMax == y_test).sum() / len(y_test))
 
 # Store model
 # serialize model to JSON

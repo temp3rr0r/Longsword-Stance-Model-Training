@@ -14,5 +14,5 @@ loaded_model.load_weights("bidirectionalRetrainingLstmLongswordModelWeights.h5")
 x_test = np.array([[ 0,0,16493,852,0,193,1793,843,0,0,107,0]]) # Expected Class: 4
 prediction = loaded_model.predict(x_test)
 predictionArgMax = np.argmax(prediction, axis=1)
-print('Class: ', predictionArgMax[0], ', Expected Class: 4')
+print('Predicted Class: ', predictionArgMax[0], ', Expected Class: 4')
 print('Confidence: ', prediction[0, predictionArgMax[0]])
