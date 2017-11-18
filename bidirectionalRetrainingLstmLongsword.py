@@ -16,8 +16,9 @@ from keras.layers import Dense, Dropout, Embedding, LSTM, Bidirectional
 max_features = 65536
 maxlen = 17 * 2 # 6 * 2
 batch_size = 4
-epoch_size = 4 # 40
+epoch_size = 40 # 40
 class_count = 7
+useTest = False
 
 print('Loading data...')
 r = np.genfromtxt("longsword.csv", delimiter=',')
@@ -55,8 +56,7 @@ r2 = np.copy(r)
 #r = np.delete(r, [0], axis=1) # Remove timestamp
 
 #np.random.shuffle(r)
-useTest = False
-proportion = 0.1
+proportion = 0.15
 if useTest == True:
     proportion15Percent = int(proportion * r.shape[0])
     x_validate = r[0:proportion15Percent, 1:maxlen + 1]
@@ -74,6 +74,9 @@ else:
     # y_test = r[proportion15Percent + 1:2 * proportion15Percent, 0]
     x_train = r[proportion30Percent + 1:len(r), 1:maxlen + 1]
     y_train = r[proportion30Percent + 1:len(r), 0]
+
+print ('Y validate:')
+print (y_validate)
 
 if useTest == True:
     print(len(x_train), 'train sequences (' + str((1 - 2 * proportion) * 100) + '%)')
