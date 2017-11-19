@@ -16,7 +16,7 @@ from keras.layers import Dense, Dropout, Embedding, LSTM, Bidirectional
 max_features = 65536
 maxlen = 17 * 2 # 6 * 2
 batch_size = 4
-epoch_size = 40 # 40
+epoch_size = 400 # 40
 class_count = 7
 useTest = False
 
